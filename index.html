@@ -13,27 +13,21 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <style>
-      [v-cloak]
-    </style>
   </head>
   <body>
     <div id="app">
-      <h1 v-cloak>{{ message }}</h1>
-      <!--<h1 v-else=>you have not viewed this page</h1>-->
+      <h1>{{ message }}</h1>
+      <input type="tekst" v-model="message" />
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-      var app = new Vue({
-        el: "#app",
-        data: {
-          message: "Hello Vue World",
-          intro: " >",
-          viewed: false,
-          viewed2: true
-        }
-      });
-    </script>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        message: "Hello Vue World"
+      }
+    });
+  </script>
 </html>
